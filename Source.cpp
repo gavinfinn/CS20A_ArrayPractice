@@ -23,7 +23,7 @@
 		{
 			for (int j = 0; j < SIZE; j++)
 			{
-			grid[i][j] = i * SIZE + j + 1;
+				grid[i][j] = i * SIZE + j + 1;
 			}
 		}
 
@@ -39,25 +39,12 @@ using namespace std;
 const int SIZE = 5;
 // Print the 5x5 grid.
 void printGrid(int grid[][SIZE]);
+
 int main()
 {
 	int grid[SIZE][SIZE];
-	// TODO
-	printGrid(grid);
-}
-void printGrid(int grid[][SIZE])
-{
-	for (int i = 0; i < SIZE; i++)
-	{
-		for (int j = 0; j < SIZE; j++)
-		{
-			cout << setw(2) << grid[i][j] << " ";
-		}
-		cout << endl;
-	}
-}
 
-/*
+	/*
 	Problem 1:
 
 		0 1 2 3 4
@@ -66,7 +53,17 @@ void printGrid(int grid[][SIZE])
 		0 1 2 3 4
 		0 1 2 3 4
 
+		for (int i = 0; i < size; i++)
+		{
+			for (int j = 0; j < size; j++)
+			{
+				grid[i][j] = j;
+			}
+		}
+
 */
+
+
 
 /*
 	Problem 2:
@@ -76,7 +73,17 @@ void printGrid(int grid[][SIZE])
 		2 2 2 2 2
 		3 3 3 3 3
 		4 4 4 4 4
+
+		for (int i = 0; i < SIZE; i++)
+		{
+			for (int j = 0; j < SIZE; j++)
+			{
+				grid[i][j] = i;
+			}
+		}
+
 */
+
 
 /*
 	Problem 3:
@@ -86,7 +93,18 @@ void printGrid(int grid[][SIZE])
 		15 14 13 12 11
 		20 19 18 17 16
 		25 24 23 22 21
+
+		for (int i = 0; i < SIZE; i++)
+		{
+			for (int j = 0; j < SIZE; j++)
+			{
+				grid[i][j] = (i + 1) * 5 - j;
+			}
+		}
 */
+
+
+
 
 /*
 	Problem 4:
@@ -211,3 +229,20 @@ Hint: See http://en.wikipedia.org/wiki/Siamese_method for an algorithm for this.
 		3 5 7					10 12 19 21  3					21 23 32 41 43  3 12
 		4 9 2					11 18 25  2  9					22 31 40 49  2 11 20
 */
+
+
+
+	printGrid(grid);
+}
+void printGrid(int grid[][SIZE])
+{
+	for (int i = 0; i < SIZE; i++)
+	{
+		for (int j = 0; j < SIZE; j++)
+		{
+			cout << setw(2) << grid[i][j] << " ";
+		}
+		cout << endl;
+	}
+}
+
