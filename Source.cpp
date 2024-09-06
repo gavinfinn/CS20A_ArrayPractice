@@ -98,13 +98,10 @@ int main()
 		{
 			for (int j = 0; j < SIZE; j++)
 			{
-				grid[i][j] = (i + 1) * 5 - j;
+				grid[i][j] = (i + 1) * SIZE - j;
 			}
 		}
 */
-
-
-
 
 /*
 	Problem 4:
@@ -114,7 +111,17 @@ int main()
 		11 12 13 14 15
 		 6  7  8  9 10
 		 1  2  3  4  5
+
+		for (int i = 0; i < SIZE; i++)
+		{
+			for (int j = 0; j < SIZE; j++)
+			{
+				grid[i][j] = SIZE * (4 - i) + j + 1;
+			}
+		}
 */
+
+
 
 /*
 	Problem 5:
@@ -124,6 +131,14 @@ int main()
 		15 14 13 12 11
 		10  9  8  7  6
 		 5  4  3  2  1
+
+		for (int i = 0; i < SIZE; i++)
+		{
+			for (int j = 0; j < SIZE; j++)
+			{
+				grid[i][j] = SIZE * (SIZE - i) - j;
+			}
+		}
 */
 
 /*
@@ -134,7 +149,17 @@ int main()
 		3  8 13 18 23
 		4  9 14 19 24
 		5 10 15 20 25
+
+		for (int i = 0; i < SIZE; i++)
+		{
+			for (int j = 0; j < SIZE; j++)
+			{
+				grid[i][j] = (i + 1) + (SIZE * j);
+			}
+		}
 */
+
+
 
 /*
 	Problem 7:
@@ -144,7 +169,23 @@ int main()
 		11 12 13 14 15
 		20 19 18 17 16
 		21 22 23 24 25
+
+		for (int i = 0; i < SIZE; i++)
+		{
+			for (int j = 0; j < SIZE; j++)
+			{
+				if (i % 2 == 0)
+				{
+					grid[i][j] = i * SIZE + j + 1;
+				}
+				else
+				{
+					grid[i][j] = (i + 1) * SIZE - j;
+				}
+			}
+		}
 */
+
 
 /*
 	Problem 8:
@@ -154,6 +195,21 @@ int main()
 		3  8 13 18 23
 		4  7 14 17 24
 		5  6 15 16 25
+
+		for (int i = 0; i < SIZE; i++)
+		{
+			for (int j = 0; j < SIZE; j++)
+			{
+				if (j % 2 == 0)
+				{
+					grid[i][j] = j * SIZE + i+ 1;
+				}
+				else
+				{
+					grid[i][j] = (j + 1) * SIZE - i;
+				}
+			}
+		}
 */
 
 /*
